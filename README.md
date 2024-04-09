@@ -47,6 +47,7 @@ $ docker build -t nestjs-api .
 # run container
 $ docker run -p 3000:3000 nestjs-api
 ```
+<<<<<<< HEAD
 
 ## Used Technologies
 
@@ -58,3 +59,5 @@ $ docker run -p 3000:3000 nestjs-api
 - [Swagger](https://swagger.io/)
 - [Jest](https://jestjs.io/)
 - [Cookies](https://www.npmjs.com/package/cookie)
+=======
+>>>>>>> 3491c8a53374a63a0b33155c2b9e19e3bf52edb7
