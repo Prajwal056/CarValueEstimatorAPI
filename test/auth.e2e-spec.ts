@@ -20,7 +20,7 @@ describe('Authentication System', () => {
 
     return request(app.getHttpServer())
       .post('/auth/signup')
-      .send({ email, password: 'alskdfjl' })
+      .send({ email, password: 'my-password' })
       .expect(201)
       .then((res) => {
         const { id, email } = res.body;
