@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nest-app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - DATABASE_URL=sqlite://./data/db.sqlite
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - db
+
+  db:
+    image: 'alpine'
+    command: >
+      sh -c '
+      apk add --no-cache sqlite;
+      mkdir -p /data;
+      sqlite3 /data/db.sqlite;
+      '
+    volumes:
+      - ./data:/data
